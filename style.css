@@ -1,0 +1,265 @@
+ @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-size: 15px;
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, 1000px  300px; 
+    background-color: black;
+}
+.container {
+    width: 1200px;
+    margin: auto;
+    margin-top: 150px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    grid-template-areas: "left right"
+                         "bottom bottom";
+}
+
+.top-left {
+    grid-area: left;
+    height: 300px;
+    padding: 35px;
+}
+
+.top-right {
+    grid-area: right;
+    height: 300px;
+}
+
+.bottom {
+    grid-area: bottom;
+    width: 900px;
+    margin-top: 210px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 100px);
+    grid-template-areas: "col ire ann";
+
+}
+
+.top-left h1 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 50px;
+    font-weight: 800;
+    padding-right: 190px;
+
+}
+
+.top-left p {
+    color: var(--Dark-Grayish-Magenta);
+    margin-top: 30px;
+    padding-right: 180px;
+    line-height: 1.4;
+}
+
+.top-right {
+    padding: 20px;
+    padding-top: 40px;
+
+}
+
+.star {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.review,
+.report,
+.besttech {
+    background-color: hsla(301, 20%, 53%, 0.11);
+    width: 400px;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 12px;
+    color: var(--Very-Dark-Magenta);
+    padding-top: 15px;
+    font-weight: 800;
+    padding-left: 10px;
+
+}
+
+.report {
+    margin-left: 40px;
+}
+
+.besttech {
+    margin-left: 80px;
+}
+
+.colton,
+.irene,
+.anne {
+    margin-left: 20px;
+    height: 220px;
+    border-radius: 15px;
+    padding: 35px;
+    width: 350px;
+}
+
+img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+
+.colton h5,
+.irene h5,
+.anne h5 {
+    color: var(--White);
+    font-size: 16px;
+
+}
+
+.colton p,
+.irene p,
+.anne p {
+    color: var(--White);
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+.colton h6,
+.irene h6,
+.anne h6 {
+    color: var(--Soft-Pink);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.colton {
+    grid-area: col;
+    background-color: var(--Very-Dark-Magenta);
+}
+
+.irene {
+    grid-area: ire;
+    background-color: var(--Very-Dark-Magenta);
+    margin-top: 25px;
+}
+
+.anne {
+    grid-area: ann;
+    background-color: var(--Very-Dark-Magenta);
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+}
+
+.letter {
+    background-color: var(--Very-Dark-Magenta);
+    width: 100px;
+    margin-left: 18px;
+    padding-top: 5px;
+}
+@media (max-width:600px) {
+  
+    body {
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left, bottom right; 
+        overflow-x: hidden;
+
+    }
+   
+    .container {
+        width: 600px;
+        margin-top: 0;  
+        margin-left: -85px;
+       margin-bottom: 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 100px);
+        grid-template-areas: "left left"
+                             "right right"
+                             "bottom bottom";
+    }
+    .bottom {
+        grid-area: bottom;
+        width: 400px;
+        margin-top: 210px;
+        margin-left: -30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 100px);
+        grid-template-areas: "col "
+                             "ire"
+                             "ann";
+    
+    }
+ 
+    .top-left h1 {
+       text-align: center;
+         padding-left: 60px;
+          width: 700px;
+        
+    }
+    .top-left p {
+        text-align: center;
+        color: var(--Dark-Grayish-Magenta);
+        margin-top: 30px;
+        width: 580px;
+        padding-left: 150px;
+    }
+    
+    .top-right{
+        margin-top: 200px;
+    }
+    .bottom{
+        margin-top: 310px;
+        margin-left: 150px;
+    }
+    .review,
+    .report,
+    .besttech {
+        background-color: hsla(301, 20%, 53%, 0.11);
+        width: 400px;
+        height: 45px;
+        margin-top: 5px;
+        border-radius: 12px;
+        color: var(--Very-Dark-Magenta);
+        padding-top: 15px;
+        font-weight: 800;
+        padding-left: 10px;
+        margin-left: 120px;
+    }
+    
+ 
+
+.irene {
+    margin-top: 130px;
+}
+.anne {   
+    margin-top: 15px;
+}
+
+}
+ 
+
+
